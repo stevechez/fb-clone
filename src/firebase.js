@@ -1,5 +1,5 @@
-import firebase, { firestore } from 'firebase';
-
+import firebase from 'firebase';
+// , { firestore }
 const firebaseConfig = {
   apiKey: "AIzaSyDRu-KWil7Wr2Kr8PP8OVEJpIXtJRHY5RM",
   authDomain: "facebook-clone-56597.firebaseapp.com",
@@ -10,7 +10,7 @@ const firebaseConfig = {
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+const db = firebaseApp.firestore();
 const auth = firebase.auth();
 const provider = new firebase.auth.GoogleAuthProvider();
 
